@@ -1,0 +1,267 @@
+EESchema Schematic File Version 4
+LIBS:arduino_isp_pcb-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MCU_Module:Arduino_Nano_v3.x A1
+U 1 1 5B5D798D
+P 5400 3500
+F 0 "A1" H 5400 2414 50  0000 C CNN
+F 1 "Arduino_Nano_v3.x" H 5400 2323 50  0000 C CNN
+F 2 "Module:Arduino_Nano" H 5550 2550 50  0001 L CNN
+F 3 "http://www.mouser.com/pdfdocs/Gravitech_Arduino_Nano3_0.pdf" H 5400 2500 50  0001 C CNN
+	1    5400 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_02x05_Odd_Even J1
+U 1 1 5B5D879F
+P 7950 3300
+F 0 "J1" H 8000 3717 50  0000 C CNN
+F 1 "Conn_02x05_Odd_Even" H 8000 3626 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x05_P2.54mm_Vertical" H 7950 3300 50  0001 C CNN
+F 3 "~" H 7950 3300 50  0001 C CNN
+	1    7950 3300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR03
+U 1 1 5B5D892E
+P 8400 3650
+F 0 "#PWR03" H 8400 3400 50  0001 C CNN
+F 1 "GND" H 8405 3477 50  0000 C CNN
+F 2 "" H 8400 3650 50  0001 C CNN
+F 3 "" H 8400 3650 50  0001 C CNN
+	1    8400 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8250 3200 8400 3200
+Wire Wire Line
+	8400 3200 8400 3300
+Wire Wire Line
+	8250 3500 8400 3500
+Connection ~ 8400 3500
+Wire Wire Line
+	8400 3500 8400 3650
+Wire Wire Line
+	8250 3400 8400 3400
+Connection ~ 8400 3400
+Wire Wire Line
+	8400 3400 8400 3500
+Wire Wire Line
+	8250 3300 8400 3300
+Connection ~ 8400 3300
+Wire Wire Line
+	8400 3300 8400 3400
+$Comp
+L power:+5V #PWR04
+U 1 1 5B5D89CA
+P 8500 2650
+F 0 "#PWR04" H 8500 2500 50  0001 C CNN
+F 1 "+5V" H 8515 2823 50  0000 C CNN
+F 2 "" H 8500 2650 50  0001 C CNN
+F 3 "" H 8500 2650 50  0001 C CNN
+	1    8500 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR02
+U 1 1 5B5D8A22
+P 5600 2350
+F 0 "#PWR02" H 5600 2200 50  0001 C CNN
+F 1 "+5V" H 5615 2523 50  0000 C CNN
+F 2 "" H 5600 2350 50  0001 C CNN
+F 3 "" H 5600 2350 50  0001 C CNN
+	1    5600 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 5B5D8A43
+P 5400 4950
+F 0 "#PWR01" H 5400 4700 50  0001 C CNN
+F 1 "GND" H 5405 4777 50  0000 C CNN
+F 2 "" H 5400 4950 50  0001 C CNN
+F 3 "" H 5400 4950 50  0001 C CNN
+	1    5400 4950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 4500 5500 4500
+Wire Wire Line
+	5400 4500 5400 4950
+Connection ~ 5400 4500
+Wire Wire Line
+	5600 2350 5600 2500
+Wire Wire Line
+	8250 3100 8500 3100
+Wire Wire Line
+	8500 3100 8500 2650
+NoConn ~ 7750 3200
+Text GLabel 7500 3300 0    50   Input ~ 0
+T_RST
+Wire Wire Line
+	7750 3300 7500 3300
+Text GLabel 4600 3900 0    50   Input ~ 0
+T_RST
+Wire Wire Line
+	4600 3900 4900 3900
+Text GLabel 7500 3100 0    50   Input ~ 0
+MOSI
+Text GLabel 4600 4000 0    50   Input ~ 0
+MOSI
+Wire Wire Line
+	7500 3100 7750 3100
+Text GLabel 7500 3500 0    50   Input ~ 0
+MISO
+Wire Wire Line
+	7750 3500 7500 3500
+Text GLabel 4600 4100 0    50   Input ~ 0
+MISO
+Wire Wire Line
+	4600 4000 4900 4000
+Wire Wire Line
+	4900 4100 4600 4100
+Text GLabel 7500 3400 0    50   Input ~ 0
+SCLK
+Wire Wire Line
+	7500 3400 7750 3400
+Text GLabel 4600 4200 0    50   Input ~ 0
+SCLK
+Wire Wire Line
+	4600 4200 4900 4200
+Text GLabel 7450 4450 0    50   Input ~ 0
+LED_HB
+Text GLabel 4600 3800 0    50   Input ~ 0
+LED_HB
+Text GLabel 4600 3700 0    50   Input ~ 0
+LED_ERROR
+Text GLabel 4600 3600 0    50   Input ~ 0
+LED_PROG
+Wire Wire Line
+	4600 3800 4900 3800
+Wire Wire Line
+	4900 3700 4600 3700
+Wire Wire Line
+	4600 3600 4900 3600
+$Comp
+L Device:LED D1
+U 1 1 5B5DB0A3
+P 8200 4450
+F 0 "D1" H 8192 4195 50  0000 C CNN
+F 1 "LED" H 8192 4286 50  0000 C CNN
+F 2 "LED_THT:LED_D5.0mm" H 8200 4450 50  0001 C CNN
+F 3 "~" H 8200 4450 50  0001 C CNN
+	1    8200 4450
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D2
+U 1 1 5B5DBEF0
+P 8200 4900
+F 0 "D2" H 8192 4645 50  0000 C CNN
+F 1 "LED" H 8192 4736 50  0000 C CNN
+F 2 "LED_THT:LED_D5.0mm" H 8200 4900 50  0001 C CNN
+F 3 "~" H 8200 4900 50  0001 C CNN
+	1    8200 4900
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D3
+U 1 1 5B5DBF14
+P 8200 5350
+F 0 "D3" H 8192 5095 50  0000 C CNN
+F 1 "LED" H 8192 5186 50  0000 C CNN
+F 2 "LED_THT:LED_D5.0mm" H 8200 5350 50  0001 C CNN
+F 3 "~" H 8200 5350 50  0001 C CNN
+	1    8200 5350
+	-1   0    0    1   
+$EndComp
+Text GLabel 7450 4900 0    50   Input ~ 0
+LED_ERROR
+Text GLabel 7450 5350 0    50   Input ~ 0
+LED_PROG
+$Comp
+L Device:R R1
+U 1 1 5B5DD10A
+P 7750 4450
+F 0 "R1" V 7543 4450 50  0000 C CNN
+F 1 "R" V 7634 4450 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal" V 7680 4450 50  0001 C CNN
+F 3 "~" H 7750 4450 50  0001 C CNN
+	1    7750 4450
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5B5DD1B5
+P 7750 4900
+F 0 "R2" V 7543 4900 50  0000 C CNN
+F 1 "R" V 7634 4900 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal" V 7680 4900 50  0001 C CNN
+F 3 "~" H 7750 4900 50  0001 C CNN
+	1    7750 4900
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5B5DD1E1
+P 7750 5350
+F 0 "R3" V 7543 5350 50  0000 C CNN
+F 1 "R" V 7634 5350 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal" V 7680 5350 50  0001 C CNN
+F 3 "~" H 7750 5350 50  0001 C CNN
+	1    7750 5350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7450 4450 7600 4450
+Wire Wire Line
+	7900 4450 8050 4450
+Wire Wire Line
+	7450 4900 7600 4900
+Wire Wire Line
+	7900 4900 8050 4900
+Wire Wire Line
+	7450 5350 7600 5350
+Wire Wire Line
+	7900 5350 8050 5350
+$Comp
+L power:GND #PWR05
+U 1 1 5B5DEFF0
+P 8600 5450
+F 0 "#PWR05" H 8600 5200 50  0001 C CNN
+F 1 "GND" H 8605 5277 50  0000 C CNN
+F 2 "" H 8600 5450 50  0001 C CNN
+F 3 "" H 8600 5450 50  0001 C CNN
+	1    8600 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8350 4450 8600 4450
+Wire Wire Line
+	8600 4450 8600 4900
+Wire Wire Line
+	8350 4900 8600 4900
+Connection ~ 8600 4900
+Wire Wire Line
+	8600 4900 8600 5350
+Wire Wire Line
+	8350 5350 8600 5350
+Connection ~ 8600 5350
+Wire Wire Line
+	8600 5350 8600 5450
+$EndSCHEMATC
