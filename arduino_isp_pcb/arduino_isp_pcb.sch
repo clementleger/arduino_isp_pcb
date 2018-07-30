@@ -31,7 +31,7 @@ U 1 1 5B5D879F
 P 7950 3300
 F 0 "J1" H 8000 3717 50  0000 C CNN
 F 1 "Conn_02x05_Odd_Even" H 8000 3626 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_2x05_P2.54mm_Vertical" H 7950 3300 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x05_P2.54mm_Vertical" H 7950 3300 50  0001 C CNN
 F 3 "~" H 7950 3300 50  0001 C CNN
 	1    7950 3300
 	1    0    0    -1  
@@ -264,4 +264,57 @@ Wire Wire Line
 Connection ~ 8600 5350
 Wire Wire Line
 	8600 5350 8600 5450
+$Comp
+L Connector_Generic:Conn_02x03_Odd_Even J2
+U 1 1 5B5EFDA9
+P 7900 1350
+F 0 "J2" H 7950 1667 50  0000 C CNN
+F 1 "Conn_02x03_Odd_Even" H 7950 1576 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 7900 1350 50  0001 C CNN
+F 3 "~" H 7900 1350 50  0001 C CNN
+	1    7900 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR06
+U 1 1 5B5EFF13
+P 8300 1450
+F 0 "#PWR06" H 8300 1200 50  0001 C CNN
+F 1 "GND" H 8305 1277 50  0000 C CNN
+F 2 "" H 8300 1450 50  0001 C CNN
+F 3 "" H 8300 1450 50  0001 C CNN
+	1    8300 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR07
+U 1 1 5B5EFF30
+P 8500 1250
+F 0 "#PWR07" H 8500 1100 50  0001 C CNN
+F 1 "+5V" H 8515 1423 50  0000 C CNN
+F 2 "" H 8500 1250 50  0001 C CNN
+F 3 "" H 8500 1250 50  0001 C CNN
+	1    8500 1250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8200 1250 8500 1250
+Wire Wire Line
+	8300 1450 8200 1450
+Text GLabel 8450 1350 2    50   Input ~ 0
+MOSI
+Text GLabel 7400 1250 0    50   Input ~ 0
+MISO
+Text GLabel 7400 1350 0    50   Input ~ 0
+SCLK
+Text GLabel 7400 1450 0    50   Input ~ 0
+T_RST
+Wire Wire Line
+	7400 1450 7700 1450
+Wire Wire Line
+	7400 1350 7700 1350
+Wire Wire Line
+	7400 1250 7700 1250
+Wire Wire Line
+	8200 1350 8450 1350
 $EndSCHEMATC
